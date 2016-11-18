@@ -7,8 +7,8 @@
 houseelf_data = read.csv("Data/houseelf-earlength-dna-data.csv")
 
 # Exercise 4
-houseelf_data_1 = read.csv("Data/houseelf-earlength-dna-data_1.csv")
-#I changed the name of the file and committed the changes
+houseelf_data_1 = read.csv("Data/houseelf-earlength-dna-data1.csv")
+#I changed the name of the file and committed the changes to git
 
 # Exercise 5
 #5.1
