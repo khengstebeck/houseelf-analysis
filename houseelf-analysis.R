@@ -19,5 +19,15 @@ houseelf_data_1 = read.csv("Data/houseelf-earlength-dna-data_1_.csv")
 
 # Exercise 6
 library(stringr)
-str_to_lower(houseelf_data_1)
+new_houseelf_data = houseelf_data_1$dnaseq
+
+get_gc_content = function(sequence){
+  #counts % of g and c in a DNA sequence
+  str_to_lower(sequence)
+  Gs <- str_count(sequence, "g")
+  Cs <- str_count(sequence, "c")
+  gc_content <- (Gs + Cs) / str_length(sequence) * 100 
+  return(gc_content)
+}
+get_gc_content(new_houseelf_data)
 
