@@ -29,5 +29,12 @@ get_gc_content = function(sequence){
   gc_content <- (Gs + Cs) / str_length(sequence) * 100 
   return(gc_content)
 }
+
+get_ear_length <- function(seq){
+    #Determine the ear length category
+    ear_lengths <- ifelse(seq > 10, "large", "small")
+    return(ear_lengths)
+}
+
 get_gc_content(new_houseelf_data)
 
