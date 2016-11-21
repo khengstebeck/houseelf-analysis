@@ -29,12 +29,25 @@ get_gc_content = function(sequence){
   gc_content <- (Gs + Cs) / str_length(sequence) * 100 
   return(gc_content)
 }
+gc_content = get_gc_content(new_houseelf_data)
+
+# Exercise 7
+#pulled the function below from github
 
 get_ear_length <- function(seq){
-    #Determine the ear length category
-    ear_lengths <- ifelse(seq > 10, "large", "small")
-    return(ear_lengths)
+  #Determine the ear length category
+  ear_lengths <- ifelse(seq > 10, "large", "small")
+  return(ear_lengths)
 }
 
-get_gc_content(new_houseelf_data)
+earlength_class = get_ear_length(houseelf_data_1$earlength)
+earlength_class
+
+#7.4
+ID = houseelf_data_1$id
+houseelf_df = data.frame(ID, earlength_class, gc_content)
+houseelf_df
+
+#7.5
+write.csv(houseelf_df, file = "houseelf_df.csv")
 
